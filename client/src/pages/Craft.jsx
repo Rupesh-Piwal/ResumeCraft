@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Personal from "../components/forms/Personal";
 
 const Craft = () => {
   return (
@@ -15,8 +16,7 @@ const Craft = () => {
       {/* Middle Section */}
 
       <div className="bg-gray-200 p-4" style={{ width: "40%" }}>
-        <h2 className="text-xl font-bold mb-4">Middle Section</h2>
-        <p>This is the content of the middle section.</p>
+        <Personal />
       </div>
 
       {/* Right Section */}
