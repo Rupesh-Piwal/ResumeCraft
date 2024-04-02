@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Personal from "../components/forms/Personal";
+import StepperComp from "../components/StepperComp";
+import Template from "../components/Template";
+import data from "../data/data";
 
 const Craft = () => {
   return (
@@ -11,6 +14,9 @@ const Craft = () => {
         <Link className="text-2xl text-white font-bold" to="/">
           Resume Craft
         </Link>
+        {/* ------ */}
+        <StepperComp />
+        {/* ------ */}
       </div>
 
       {/* Middle Section */}
@@ -22,8 +28,7 @@ const Craft = () => {
       {/* Right Section */}
 
       <div className="bg-gray-300 p-4 flex-grow">
-        <h2 className="text-xl font-bold mb-4">Right Section</h2>
-        <p>This is the content of the right section.</p>
+        <Template data={data} />
       </div>
     </div>
   );
