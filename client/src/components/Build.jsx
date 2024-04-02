@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Build = () => {
   return (
-    <div className=" m-auto flex flex-col justify-center items-center gap-1 mt-[100px]">
+    <div className=" m-auto flex flex-col justify-center items-center gap-1 mt-[70px] mb-[20px]">
       <h1 className="text-[40px]">Create Your Perfect Resume</h1>
       <h2 className="text-[20px] text-gray-500">
         Build a professional resume in minutes with our easy-to-use{" "}
