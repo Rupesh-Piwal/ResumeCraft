@@ -4,13 +4,14 @@ import Personal from "../components/forms/Personal";
 import StepperComp from "../components/StepperComp";
 import Template from "../components/Template";
 import data from "../data/data";
+import Template2 from "../components/Template2";
 
 const Craft = () => {
   return (
     <div className="flex h-screen">
       {/* Left Section */}
 
-      <div className="bg-indigo-900 p-4" style={{ width: "15%" }}>
+      <div className="bg-indigo-800 p-4" style={{ width: "15%" }}>
         <Link className="text-2xl text-white font-bold" to="/">
           Resume Craft
         </Link>
@@ -27,8 +28,9 @@ const Craft = () => {
 
       {/* Right Section */}
 
-      <div className="bg-gray-300 p-4 flex-grow">
-        <Template data={data} />
+      <div className="bg-white p-4 flex-grow">
+        {/* <Template data={data} /> */}
+        <Template2 data={data} />
       </div>
     </div>
   );

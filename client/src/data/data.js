@@ -1,12 +1,12 @@
 const data = {
-  name: "John Doe",
-  email: "john@example.com",
-  phone: "123-456-7890",
+  name: "Steve smith",
+  email: "steve49@gmail.com",
+  phone: "9325575937",
   experience: [
     {
       position: "Software Engineer",
-      company: "ABC Inc.",
-      duration: "2018 - Present",
+      company: "Razorpay",
+      duration: "2022 - Present",
       description: "Worked on building web applications using React.js.",
     },
     // Add more experience items as needed
@@ -14,8 +14,8 @@ const data = {
   education: [
     {
       degree: "Bachelor of Science in Computer Science",
-      institution: "XYZ University",
-      duration: "2014 - 2018",
+      institution: "BVCOEL, PUNE",
+      duration: "2021 - 2025",
     },
     // Add more education items as needed
   ],
