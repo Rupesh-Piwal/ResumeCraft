@@ -15,8 +15,35 @@ const Template2 = ({ data }) => {
         <div className="bg-gray-400 w-full h-[200px]">
           <h2 className="text-2xl font-bold text-gray-800 ml-3 ">Education</h2>
         </div>
-        <div className="bg-gray-500 w-full h-[200px]"></div>
-        <div className=""></div>
+        <div className="bg-gray-500 w-full h-[200px]">
+          <h2 className="text-2xl font-bold text-gray-800 ml-3">Skills</h2>
+          <ul className="list-none">
+            {data.skills.map((skill, index) => (
+              <li
+                key={index}
+                className="mt-2 text-white px-2 bg-gray-700 inline-block min-w-min p-1 rounded mx-2"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="">
+          <h2 className="text-2xl font-bold text-gray-800 ml-3">Contact</h2>
+          <ul>
+            <li>
+              <span className="font-bold text-gray-800">•</span>9325575937
+            </li>
+            <li>
+              <span className="font-bold text-gray-800">•</span>
+              steve49@gmail.com
+            </li>
+            <li>
+              <span className="font-bold text-gray-800">•</span>street123,
+              smudge area,sydney
+            </li>
+          </ul>
+        </div>
       </div>
       {/* Second part */}
       <div className="col-span-2">
