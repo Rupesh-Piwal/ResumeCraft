@@ -65,15 +65,15 @@ const Template2 = ({ data }) => {
                   </p>
                 </div>
                 <p>
-                  <span className="font-bold text-blue-800">•</span>{" "}
+                  <span className="font-bold text-gray-800">•</span>{" "}
                   {exp.description}
                 </p>
                 <p>
-                  <span className="font-bold text-blue-800">•</span>{" "}
+                  <span className="font-bold text-gray-800">•</span>{" "}
                   {exp.description}
                 </p>
                 <p>
-                  <span className="font-bold text-blue-800">•</span>{" "}
+                  <span className="font-bold text-gray-800">•</span>{" "}
                   {exp.description}
                 </p>
               </li>
@@ -81,6 +81,75 @@ const Template2 = ({ data }) => {
           </ul>
         </div>
 
+        <div className="mt-2 pb-3 ml-3">
+          <h2 className="text-2xl font-bold text-gray-800">Projects</h2>
+          <ul className="list-none">
+            {data.projects.map((project, index) => (
+              <li key={index} className="mt-2">
+                <h3 className="text-lg font-bold">{project.title}</h3>
+                <p>
+                  {" "}
+                  <span className="font-bold text-gray-800">•</span>{" "}
+                  {project.description}
+                </p>
+                <p>
+                  {" "}
+                  <span className="font-bold text-gray-800">•</span>{" "}
+                  {project.description}
+                </p>
+                <p>
+                  {" "}
+                  <span className="font-bold text-gray-800">•</span>{" "}
+                  {project.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <ul className="list-none">
+            {data.projects.map((project, index) => (
+              <li key={index} className="mt-2">
+                <h3 className="text-lg font-bold">{project.title}</h3>
+                <p>
+                  {" "}
+                  <span className="font-bold text-blue-800">•</span>{" "}
+                  {project.description}
+                </p>
+                <p>
+                  {" "}
+                  <span className="font-bold text-blue-800">•</span>{" "}
+                  {project.description}
+                </p>
+                <p>
+                  {" "}
+                  <span className="font-bold text-blue-800">•</span>{" "}
+                  {project.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <ul className="list-none ">
+            {data.projects.map((project, index) => (
+              <li key={index} className="mt-2">
+                <h3 className="text-lg font-bold">{project.title}</h3>
+                <p>
+                  {" "}
+                  <span className="font-bold text-blue-800">•</span>{" "}
+                  {project.description}
+                </p>
+                <p>
+                  {" "}
+                  <span className="font-bold text-blue-800">•</span>{" "}
+                  {project.description}
+                </p>
+                <p>
+                  {" "}
+                  <span className="font-bold text-blue-800">•</span>{" "}
+                  {project.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="mt-2 pb-3 ml-3">
           <h2 className="text-2xl font-bold text-gray-800">Projects</h2>
           <ul className="list-none">

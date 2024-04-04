@@ -28,7 +28,7 @@ const Craft = () => {
 
       {/* Right Section */}
 
-      <div className="bg-white p-4 flex-grow">
+      <div className="bg-white p-4 flex-grow overflow-y-auto">
         {/* <Template data={data} /> */}
         <Template2 data={data} />
       </div>
