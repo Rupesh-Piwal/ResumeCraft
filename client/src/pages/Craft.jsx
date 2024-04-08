@@ -11,7 +11,7 @@ const Craft = () => {
     <div className="flex h-screen">
       {/* Left Section */}
 
-      <div className="bg-indigo-800 p-4" style={{ width: "15%" }}>
+      <div className="bg-indigo-800 p-4" style={{ width: "17%" }}>
         <Link className="text-2xl text-white font-bold" to="/">
           Resume Craft
         </Link>
@@ -22,7 +22,7 @@ const Craft = () => {
 
       {/* Middle Section */}
 
-      <div className="bg-gray-200 p-4" style={{ width: "40%" }}>
+      <div className="bg-gray-200 p-4" style={{ width: "45%" }}>
         <Personal />
       </div>
 

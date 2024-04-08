@@ -12,10 +12,26 @@ const Template2 = ({ data }) => {
           alt=""
         />
 
-        <div className="bg-gray-400 w-full h-[200px]">
-          <h2 className="text-2xl font-bold text-gray-800 ml-3 ">Education</h2>
+        <div className="mt-2.5 pb-3 ml-3">
+          <h2 className="text-2xl font-bold text-gray-800">Education</h2>
+          <ul className="list-none">
+            {data.education.map((edu, index) => (
+              <li key={index} className="mt-2">
+                <h3 className="text-lg font-bold">{edu.degree}</h3>
+                <div className="text-sm">
+                  <p className="font-semibold text-gray-600">
+                    {" "}
+                    {edu.institution}
+                  </p>
+                  <p className="text-gray-500 ">
+                    <i>{edu.duration}</i>
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="bg-gray-500 w-full h-[200px]">
+        <div className=" w-full mb-5">
           <h2 className="text-2xl font-bold text-gray-800 ml-3">Skills</h2>
           <ul className="list-none">
             {data.skills.map((skill, index) => (
@@ -28,8 +44,8 @@ const Template2 = ({ data }) => {
             ))}
           </ul>
         </div>
-        <div className="">
-          <h2 className="text-2xl font-bold text-gray-800 ml-3">Contact</h2>
+        <div className=" ml-3">
+          <h2 className="text-2xl font-bold text-gray-800">Contact</h2>
           <ul>
             <li>
               <span className="font-bold text-gray-800">•</span>9325575937
