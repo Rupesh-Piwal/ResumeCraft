@@ -1,8 +1,11 @@
 // @desc    Auth user & get token
 // @route   POST /api/users/auth
 // @access  Public
-const authUser = (req, res) => {
-    res.json({ message: 'Success' });
-  };
-  
-  export { authUser };
+
+import asyncHandler from "express-async-handler";
+
+const authUser = asyncHandler(async (req, res) => {
+  res.status(200).json({ message: "Auth User" });
+});
+
+export { authUser };
