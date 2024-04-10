@@ -1,8 +1,9 @@
 import React from "react";
+import "../App.css"
 import { Link } from "react-router-dom";
 import Personal from "../components/forms/Personal";
-import StepperComp from "../components/StepperComp";
-import Template from "../components/Template";
+// import StepperComp from "../components/StepperComp";
+// import Template from "../components/Template";
 import data from "../data/data";
 import Template2 from "../components/Template2";
 
@@ -16,7 +17,7 @@ const Craft = () => {
           Resume Craft
         </Link>
         {/* ------ */}
-        <StepperComp />
+        {/* <StepperComp /> */}
         {/* ------ */}
       </div>
 
@@ -28,7 +29,7 @@ const Craft = () => {
 
       {/* Right Section */}
 
-      <div className="bg-white p-4 flex-grow overflow-y-auto">
+      <div className="bg-white p-4 flex-grow overflow-y-auto custom-scrollbar">
         {/* <Template data={data} /> */}
         <Template2 data={data} />
       </div>
