@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 import cors from "cors";
-import { test, registerUser } from "../controllers/authController.js";
+import { registerUser } from "../controllers/authController.js";
 
 //middleware
 router.use(
@@ -11,7 +11,7 @@ router.use(
   })
 );
 
-router.get("/", test);
-router.post("/signup", registerUser);
+// router.get("/", test);
+router.post("/register", registerUser);
 
 export default router;
