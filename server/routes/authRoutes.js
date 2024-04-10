@@ -12,6 +12,6 @@ router.use(
 );
 
 router.get("/", test);
-router.post("/register", registerUser);
+router.post("/signup", registerUser);
 
 export default router;

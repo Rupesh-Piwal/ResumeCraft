@@ -10,7 +10,7 @@ const Login = () => {
 
   const loginUser = (e) => {
     e.preventDefault();
-    axios.get("/")
+    axios.get("/");
   };
 
   return (
@@ -27,12 +27,7 @@ const Login = () => {
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form
-          className="space-y-6"
-          action="#"
-          method="POST"
-          onSubmit={loginUser}
-        >
+        <form className="space-y-6" onSubmit={loginUser}>
           <div>
             <label
               htmlFor="email"

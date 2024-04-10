@@ -17,7 +17,7 @@ const SignUp = () => {
     e.preventDefault();
     const { name, email, password } = data;
     try {
-      const { data } = await axios.post("/register", { name, email, password });
+      const { data } = await axios.post("/signup", { name, email, password });
       if (data.error) {
         toast.error(data.error);
       } else {
@@ -54,12 +54,7 @@ const SignUp = () => {
               Sign In
             </Link>
           </p>
-          <form
-            onChange={registerUser}
-            action="#"
-            method="POST"
-            className="mt-8"
-          >
+          <form onSubmit={registerUser} className="mt-8">
             <div className="space-y-5">
               <div>
                 <label
@@ -126,7 +121,7 @@ const SignUp = () => {
               </div>
               <div>
                 <button
-                  type="button"
+                  type="submit"
                   className="inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-indigo-500"
                 >
                   Create Account <ArrowRight className="ml-2" size={16} />
