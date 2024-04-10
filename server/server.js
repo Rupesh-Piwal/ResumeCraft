@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import { mongoose } from "mongoose";
 dotenv.config();
+const app = express();
 
 //database connection
 mongoose
@@ -10,9 +11,10 @@ mongoose
   .then(() => console.log("Database Connected!!!"))
   .catch((err) => console.log("Database not connected.....", err));
 
-const port = process.env.PORT || 5000;
+//middleware
+app.use(express.json());
 
-const app = express();
+const port = process.env.PORT || 5000;
 
 app.use("/", authRoutes);
 
