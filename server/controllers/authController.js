@@ -2,4 +2,8 @@ const test = (req, res) => {
   res.json("hello testing");
 };
 
-export { test };
+const registerUser = (req, res) => {
+  const { name, email, passowrd } = req.body;
+};
+
+export { test, registerUser };
