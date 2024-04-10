@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -43,14 +44,7 @@ const Login = () => {
               >
                 Password
               </label>
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
-                >
-                  Forgot password?
-                </a>
-              </div>
+              <div className="text-sm"></div>
             </div>
             <div className="mt-2">
               <input
@@ -76,12 +70,12 @@ const Login = () => {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Don't have an account?{" "}
-          <a
-            href="#"
+          <Link
+            to="/signup"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
           >
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -24,13 +25,13 @@ const SignUp = () => {
           </h2>
           <p className="mt-2 text-center text-base text-gray-600">
             Already have an account?{" "}
-            <a
-              href="#"
+            <Link
+              to="/login"
               title=""
               className="font-medium text-indigo-600 transition-all duration-200 hover:underline"
             >
               Sign In
-            </a>
+            </Link>
           </p>
           <form action="#" method="POST" className="mt-8">
             <div className="space-y-5">
