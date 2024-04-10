@@ -9,6 +9,5 @@ const app = express();
 
 app.use("/api/users", userRoutes);
 
-app.get("/", (req, res) => res.send("hello mf"));
 
 app.listen(port, () => console.log(`server started on port:${port}`));
