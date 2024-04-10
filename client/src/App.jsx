@@ -3,7 +3,10 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Craft from "./pages/Craft";
+import axios from "axios";
 
+axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.withCredentials = true;
 
 const App = () => {
   return (
