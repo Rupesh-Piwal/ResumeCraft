@@ -1,4 +1,5 @@
 import User from "../models/user.js";
+import hashPassword from "../helpers/auth.js";
 
 // const test = (req, res) => {
 //   res.json("hello testing");
@@ -28,11 +29,14 @@ const registerUser = async (req, res) => {
         error: "Email is taken already",
       });
     }
+
+    const hashedPassword = await hashPassword(password);
+
     //create a user in DB
     const user = await User.create({
       name,
       email,
-      password,
+      password: hashedPassword,
     });
 
     return res.json(user);
