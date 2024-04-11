@@ -1,10 +1,11 @@
 import User from "../models/user.js";
-import hashPassword from "../helpers/auth.js";
+import { hashPassword, comparePassword } from "../helpers/auth.js";
 
 // const test = (req, res) => {
 //   res.json("hello testing");
 // };
 
+//REGISTER END-POINT
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -45,4 +46,31 @@ const registerUser = async (req, res) => {
   }
 };
 
-export { registerUser };
+// LOGIN END-POINT
+
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // check if user exists
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.json({
+        error: "No user found",
+      });
+    }
+
+    //check is passwords match
+    const match = await comparePassword(password, user.password);
+    if (match) {
+      res.json("passwords match");
+    }
+    if (!match) {
+      res.json("passwords do not match");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { loginUser, registerUser };
