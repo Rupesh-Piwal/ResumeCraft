@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import mongoose from "mongoose"; // Import Mongoose properly
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,9 @@ mongoose
 
 // Middleware
 app.use(express.json());
+// middlewares for jwt 
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 5000;
 
