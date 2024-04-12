@@ -1,5 +1,5 @@
+import { comparePassword, hashPassword } from "../helpers/auth.js";
 import User from "../models/user.js";
-import { hashPassword, comparePassword } from "../helpers/auth.js";
 
 //REGISTER END-POINT
 const registerUser = async (req, res) => {
@@ -64,7 +64,9 @@ const loginUser = async (req, res) => {
       res.json("passwords match");
     }
     if (!match) {
-      res.json("passwords do not match");
+      res.json({
+        error: "Passwords do not match",
+      });
     }
   } catch (error) {
     console.log(error);

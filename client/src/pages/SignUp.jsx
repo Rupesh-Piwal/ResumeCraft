@@ -22,7 +22,7 @@ const SignUp = () => {
         toast.error(data.error);
       } else {
         setData({});
-        toast.success("Registration Successful, Welcome!");
+        toast.success("Registration Successfull!!");
         navigate("/login");
       }
     } catch (error) {
