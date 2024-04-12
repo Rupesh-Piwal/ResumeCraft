@@ -20,7 +20,7 @@ const Login = () => {
         toast.error(data.error);
       } else {
         setData({});
-        navigate("/");
+        navigate("/craft");
       }
     } catch (error) {
       console.log(error);
