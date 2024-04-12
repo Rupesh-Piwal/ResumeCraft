@@ -55,8 +55,7 @@ const loginUser = async (req, res) => {
         error: "No user found",
       });
     }
-    console.log("Provided password:", password);
-    console.log("Stored hashed password:", user.password);
+
     //check is passwords match
     const match = await comparePassword(password, user.password);
     console.log("Password match:", match);
