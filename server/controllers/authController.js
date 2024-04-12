@@ -1,10 +1,6 @@
 import User from "../models/user.js";
 import { hashPassword, comparePassword } from "../helpers/auth.js";
 
-// const test = (req, res) => {
-//   res.json("hello testing");
-// };
-
 //REGISTER END-POINT
 const registerUser = async (req, res) => {
   try {
@@ -59,9 +55,11 @@ const loginUser = async (req, res) => {
         error: "No user found",
       });
     }
-
+    console.log("Provided password:", password);
+    console.log("Stored hashed password:", user.password);
     //check is passwords match
     const match = await comparePassword(password, user.password);
+    console.log("Password match:", match);
     if (match) {
       res.json("passwords match");
     }
@@ -70,6 +68,7 @@ const loginUser = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
+    res.status(500).json({ error: "An error occurred" });
   }
 };
 

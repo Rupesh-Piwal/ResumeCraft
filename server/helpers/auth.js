@@ -20,4 +20,6 @@ const comparePassword = (password, hashed) => {
   return bcrypt.compare(password, hashed);
 };
 
-export  { comparePassword, hashPassword };
+export { hashPassword, comparePassword };
+
+
